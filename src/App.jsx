@@ -4,9 +4,9 @@ import FormNuevaCategoria from './components/Formularios/FormularioNC'
 import FormNuevoVideo from './components/Formularios/FormularioNV'
 import Header from './components/Header/Header'
 import GlobalStyle from './globalStyle'
-import Principal from './components/Principal/Principal'
 
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import Home from './pages/Home'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Principal />} />
+          <Route path='/' element={<Home />} />
           <Route path='/FormNuevoVideo' element={<FormNuevoVideo />} />
           <Route path='/FormNuevaCategoria' element={<FormNuevaCategoria />} />
         </Routes>

@@ -105,3 +105,39 @@ export const Th = styled.th`
     border: ${({Bdnegro})=> Bdnegro? "none": "4px solid #fff"};
 `
 
+// --------------------------
+
+export const DivImg = styled.div`
+border-radius: 4px;
+border: 4px solid #6BD1FF;
+`
+
+export const P = styled.p`
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+`
+export const Img =styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+export const TitiloCategoria =styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6BD1FF;
+    width: 250px;
+    height: 70px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 45px;
+    & h1{
+        font-size: 40px;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        line-height: 70px;
+    }
+`

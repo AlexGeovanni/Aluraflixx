@@ -5,6 +5,7 @@ import { Btn } from "../UI"
 import { Link } from "react-router-dom";
 
 const Head = styled.header`
+    position: relative;
     width: 100%;
     padding:20px 40px ;
     display: flex;
@@ -12,6 +13,7 @@ const Head = styled.header`
     align-items: center;
     background-color: rgba(0, 0, 0, 1);
     border-bottom:3px solid rgba(42, 122, 228, 1); 
+    z-index: 1;
 `
 
 
