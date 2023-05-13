@@ -36,7 +36,7 @@ const Header =()=>{
                 <Link to={"/"} ><img width={"120px"} src={Logo}  /></Link>
             </div>
             <nav>
-                <Link to="/FormNuevoVideo" ><BtnHeader>Nuevo Video</BtnHeader></Link>
+                <Link to="/NuevoVideo " ><BtnHeader>Nuevo Video</BtnHeader></Link>
             </nav>
         </Head>
     )

@@ -124,15 +124,12 @@ export const Img =styled.img`
 `
 
 export const TitiloCategoria =styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     background-color: #6BD1FF;
-    width: 250px;
-    height: 70px;
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 45px;
+    padding: 0 25px;
     & h1{
         font-size: 40px;
         font-weight: 400;

@@ -35,7 +35,8 @@ const H1 = styled.h1`
 
 
 
-const Principal =()=>{
+const Principal =(props)=>{
+    const {equipos,categorias}=props;
     return(
         <Section>
             <Banner />
@@ -49,12 +50,15 @@ const Principal =()=>{
                         <P> Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React</P>
                     </div>
                     <DivImg>
-                        <Img src="https://i.ytimg.com/vi/AG2QssLpQzI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbUU2Mf8CAJ3sB0P3Lf5XVkbyYMQ" alt="" />
+                        <Img src="https://i.ytimg.com/vi/rpvrLaBQwgg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJK_72imvkPUftCR6i52lfmAwR2A" alt="" />
                     </DivImg>
                 </Div>
-            <Carosuel />
             </div>
-            <Carosuel />
+            {
+                categorias.map((categoria)=>{
+                    return <Carosuel key={categoria.titulo} categoria={categoria} equipos={equipos.filter((equipo)=> equipo.categoria === categoria.titulo)} />
+                })
+            }
         </Section>
     )
 }
