@@ -4,7 +4,8 @@ import TextTarea from "../Campos/Textarea";
 import { Link } from "react-router-dom";
 import ListaOpciones from "../ListaOpciones/ListaOpciones";
 import { useState } from "react";
-
+import { Api } from "../../api/ClienteService.js";
+import {v4 as uuidv4} from "uuid"
 
 
 const FormNuevoVideo =(props)=>{
@@ -15,9 +16,10 @@ const FormNuevoVideo =(props)=>{
     const [descripcion,setDescripcion]=useState('');
     const [codigoS,setCodigoS]=useState('');
 
-    const EnviarDatos=(e)=>{
+    const EnviarDatos=async(e)=>{
         e.preventDefault()
         const datos ={
+            id:uuidv4(),
             titulo,
             urlVideo,
             urlImg,
@@ -25,8 +27,8 @@ const FormNuevoVideo =(props)=>{
             descripcion,
             codigoS
         }
+        await Api.post("videos",datos);
     }
-    
 
 
     return(

@@ -1,122 +1,146 @@
 {
-    "Videos":[
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/AG2QssLpQzI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbUU2Mf8CAJ3sB0P3Lf5XVkbyYMQ",
-            "categoria":"Front End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/rpvrLaBQwgg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJK_72imvkPUftCR6i52lfmAwR2A",
-            "categoria":"Front End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/t-iqt1b2qqk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvHzi_mOtKXBpQWhCpa0KUn52vow",
-            "categoria":"Back End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/GJfOSoaXk4s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKpxz6vMwTw26HQyprrrwHFadQ2g",
-            "categoria":"Front End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/cLLKVd5CNLc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoAq6RVkWNnROKxhWbny5h0GbMwA",
-            "categoria":"Back End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/UuAX5azcvDQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIgMyXxVqSIC310Cq0_iicekvCkQ",
-            "categoria":"Front End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/EoPvlE85XAQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPs_pZWDQJClLViVgQYyfBgD8qkw",
-            "categoria":"Back End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/vhwspfvI52k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB69jh2_4uiilDUzFYKS6IZMQh5Ag",
-            "categoria":"Innovación y Gestión",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/G1cDRqKuxpg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEwV2ndlV0y65IJ71gQVC8d9VKxg",
-            "categoria":"Back End",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/YhR7Zp8NUzE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6UTsxfxASIvP5FfJBLJcV7Fykuw",
-            "categoria":"Innovación y Gestión",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/6N3OkLCfK-0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDq1E4lzcafq884jsP44Nu4YGTDg",
-            "categoria":"Innovación y Gestión",
-            "descripcion":"",
-            "codigoS":""
-        },
-        {
-            "urlVideo":"",
-            "urlImg":"https://i.ytimg.com/vi/_zYbZ5S0VMw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3jN7HRrXJqNgydVEh5dgiO6jEBA",
-            "categoria":"Innovación y Gestión",
-            "descripcion":"",
-            "codigoS":""
-        }
-    ],
-    "Categorias":[
-        {
-            "titulo":"Front End",
-            "colorPrimario":"#6BD1FF"
-        },
-        {
-            "titulo":"Back End",
-            "colorPrimario":"#00C86F"
-        },
-        {
-            "titulo":"Mobil",
-            "colorPrimario":"#FFBA05"
-        },
-        {
-            "titulo":"Infraestructura",
-            "colorPrimario":"#9CD33B"
-        },
-        {
-            "titulo":"Data Science",
-            "colorPrimario":"#9CD33B"
-        },
-        {
-            "titulo":"Design & UX",
-            "colorPrimario":"#DC6EBE"
-        },
-        {
-            "titulo":"Marketing Digital",
-            "colorPrimario":"#6B5BE2"
-        },
-        {
-            "titulo":"Innovación y Gestión",
-            "colorPrimario":"#FF8C2A"
-        }
-    ]
+  "videos": [
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/AG2QssLpQzI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbUU2Mf8CAJ3sB0P3Lf5XVkbyYMQ",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/rpvrLaBQwgg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJK_72imvkPUftCR6i52lfmAwR2A",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/t-iqt1b2qqk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvHzi_mOtKXBpQWhCpa0KUn52vow",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/GJfOSoaXk4s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKpxz6vMwTw26HQyprrrwHFadQ2g",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/cLLKVd5CNLc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoAq6RVkWNnROKxhWbny5h0GbMwA",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/UuAX5azcvDQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIgMyXxVqSIC310Cq0_iicekvCkQ",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/EoPvlE85XAQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPs_pZWDQJClLViVgQYyfBgD8qkw",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/vhwspfvI52k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB69jh2_4uiilDUzFYKS6IZMQh5Ag",
+      "categoria": "Innovación y Gestión",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/G1cDRqKuxpg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEwV2ndlV0y65IJ71gQVC8d9VKxg",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/YhR7Zp8NUzE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6UTsxfxASIvP5FfJBLJcV7Fykuw",
+      "categoria": "Innovación y Gestión",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/6N3OkLCfK-0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDq1E4lzcafq884jsP44Nu4YGTDg",
+      "categoria": "Innovación y Gestión",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "urlVideo": "",
+      "urlImg": "https://i.ytimg.com/vi/_zYbZ5S0VMw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3jN7HRrXJqNgydVEh5dgiO6jEBA",
+      "categoria": "Innovación y Gestión",
+      "descripcion": "",
+      "codigoS": ""
+    }
+  ],
+  "categorias": [
+    {
+      "id": "a049fc6c-1728-4826-9488-cbda893b3717",
+      "titulo": "Front End",
+      "colorPrimario": "#6BD1FF",
+      "descripcion": "Todos los videos que estoy usando para estudiar Front End",
+      "codigoS": "fronnt"
+    },
+    {
+      "id": "83ac08c4-6b41-47b5-809d-d024fa2bc3de",
+      "titulo": "Back End",
+      "colorPrimario": "#00C86F",
+      "descripcion": "Todos los videos que estoy usando para estudiar Back End",
+      "codigoS": "Bacckk"
+    },
+    {
+      "id": "db2acab7-5f05-42c2-b61d-01987db02993",
+      "titulo": "Mobile",
+      "colorPrimario": "#FFBA05",
+      "descripcion": "Contenido que vengo estudiando sobre React Native y Flutter",
+      "codigoS": "mobille"
+    },
+    {
+      "id": "eb08f4b3-ffce-48ce-b0d9-6a4660120dbb",
+      "titulo": "Infraestrutura",
+      "colorPrimario": "#9CD33B",
+      "descripcion": "Todo lo que estoy aprendiendo sobre Docker y mucho mas",
+      "codigoS": "infraesst"
+    },
+    {
+      "id": "89848ba0-3d1f-4952-a70d-81251b37b15f",
+      "titulo": "Data Science",
+      "colorPrimario": "#9CD33B",
+      "descripcion": "Cosas de React y Python que vengo aprediendo",
+      "codigoS": "Dataas"
+    },
+    {
+      "id": "8248da26-7566-4d3f-8467-02be8f8596b5",
+      "titulo": "Design & UX",
+      "colorPrimario": "#DC6EBE",
+      "descripcion": "Herramientas y técnicas que esudio sobre UX y Design",
+      "codigoS": "Desss"
+    },
+    {
+      "id": "740599fb-8578-4daa-aedc-6880cf586bb2",
+      "titulo": "Marketing Digital",
+      "colorPrimario": "#6B5BE2",
+      "descripcion": "La forma de vender y monetizar mis ideas",
+      "codigoS": "Markk"
+    },
+    {
+      "id": "0414ddd1-a10b-4e73-979d-4aedc8ac26f1",
+      "titulo": "Innovación y Gestión",
+      "colorPrimario": "#FF8C2A",
+      "descripcion": "Como mantener el equipo felíz y mucho mas",
+      "codigoS": "Innovacion"
+    }
+  ]
 }

@@ -1,10 +1,21 @@
 import Principal from "../components/Principal/Principal"
+import { useState,useEffect } from "react"
+import { Api } from "../api/ClienteService.js"
 
+const Home = ()=>{
 
+    const [categorias,setCategoria]= useState([])
+    const [equipos,setEquipos]= useState([])
+    useEffect(()=>{
+            const Post =async()=>{
+                const equipo =await Api.get("videos");
+                const categoria = await Api.get("categorias")
+                setEquipos(equipo.data);
+                setCategoria(categoria.data)
+            }
+            Post()
+    },[])
 
-const Home = (props)=>{
-    const {equipos,categorias}= props
-    
     return(
         <>
         <Principal equipos={equipos} categorias={categorias} />

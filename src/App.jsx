@@ -135,17 +135,17 @@ const [categorias,setCategorias] =useState([
   return (
     <>
     <GlobalStyle />
-      <Router>
+    <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Home equipos={equipos} categorias={categorias} />} />
-          <Route path='/NuevoVideo' element={<NuevoVideo categorias={categorias.map((categoria)=> categoria.titulo)} />} />
-          <Route path='/NuevaCategoria' element={<NuevaCategoria />} />
+            <Route path='/' element={<Home  />} />
+            <Route path='/NuevoVideo' element={<NuevoVideo  />} />
+            <Route path='/NuevaCategoria' element={<NuevaCategoria />} />
         </Routes>
-      </Router>
-      <Footer />
+    </Router>
+    <Footer />
     </>
-  )
+)
 }
 
 export default App
