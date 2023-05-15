@@ -3,28 +3,47 @@ import { Btn,BtnLimpia,ContentBtns,Title,Section,Form } from "../UI";
 import Inputs from "../Campos/Inputs";
 import TextTarea from "../Campos/Textarea";
 import ContentTable from "../Table/Table";
-import { useState } from "react";
 import {v4 as uuidv4} from "uuid";
 import { Api } from "../../api/ClienteService.js";
+import { useState,useEffect } from "react"
+
 
 const FormNuevaCategoria =()=>{
 
     const [titulo,setTitulo]=useState('');
     const [descripcion,setDescripcion]=useState('');
-    const [color,setcolor]=useState('');
+    const [colorPrimario,setColor]=useState('#000000');
     const [codigoS,setCodigoS]=useState('');
+    const [categorias,setCategorias]= useState([])
+
+    useEffect(()=>{
+        const ConsultaApi=async()=>{
+            const{data}= await Api.get("categorias");
+            setCategorias(data)
+        }
+        ConsultaApi();
+    },[])
 
     const EnviarDatos=async(e)=>{
         e.preventDefault()
         const datos ={
             id:uuidv4(),
             titulo,
-            color,
+            colorPrimario,
             descripcion,
             codigoS
         }
-        await Api.post('categorias',datos)
+        await Api.post('categorias',datos);
+        const{data}= await Api.get("categorias");
+        setCategorias(data)
     }
+
+    const EliminarCategoria=async(id)=>{
+        await Api.delete(`categorias/${id}`);
+        const{data}= await Api.get("categorias");
+        setCategorias(data)
+    }
+
 
     return(
         <Section>
@@ -42,7 +61,7 @@ const FormNuevaCategoria =()=>{
                 <Inputs 
                     tipo="color" 
                     titulo="color"
-                    ActualizarValor={setcolor}
+                    ActualizarValor={setColor}
                 />
                 <Inputs 
                     tipo="text" 
@@ -53,12 +72,11 @@ const FormNuevaCategoria =()=>{
                 <ContentBtns>
                     <div>
                         <Btn>Guadar</Btn>
-                        <BtnLimpia>Limpar</BtnLimpia>
+                        <BtnLimpia type="reset" value="Limpiar" /> 
                     </div>
                 </ContentBtns>
             </Form>
-            <ContentTable />
-
+            <ContentTable categorias={categorias} EliminarCategoria={EliminarCategoria} />
         </Section>
     )
 }
@@ -66,37 +84,3 @@ const FormNuevaCategoria =()=>{
 
 export default FormNuevaCategoria
 
-/*
-{
-      "titulo": "Front End",
-      "colorPrimario": "#6BD1FF"
-    },
-    {
-      "titulo": "Back End",
-      "colorPrimario": "#00C86F"
-    },
-    {
-      "titulo": "Mobil",
-      "colorPrimario": "#FFBA05"
-    },
-    {
-      "titulo": "Infraestructura",
-      "colorPrimario": "#9CD33B"
-    },
-    {
-      "titulo": "Data Science",
-      "colorPrimario": "#9CD33B"
-    },
-    {
-      "titulo": "Design & UX",
-      "colorPrimario": "#DC6EBE"
-    },
-    {
-        "titulo": "Marketing Digital",
-        "colorPrimario": "#6B5BE2"
-    },
-    {
-        "titulo": "Innovación y Gestión",
-        "colorPrimario": "#FF8C2A"
-    }
-*/

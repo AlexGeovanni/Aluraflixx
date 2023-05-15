@@ -15,7 +15,7 @@ const FormNuevoVideo =(props)=>{
     const [categoria,setCategoria]=useState('');
     const [descripcion,setDescripcion]=useState('');
     const [codigoS,setCodigoS]=useState('');
-
+    
     const EnviarDatos=async(e)=>{
         e.preventDefault()
         const datos ={
@@ -67,7 +67,7 @@ const FormNuevoVideo =(props)=>{
                 <ContentBtns>
                     <div>
                         <Btn>Guadar</Btn>
-                        <BtnLimpia>Limpar</BtnLimpia>
+                        <BtnLimpia type="reset" value="Limpiar" /> 
                     </div>
                     <Link to="/NuevaCategoria" ><Btn>Nueva Categoria</Btn></Link>
                 </ContentBtns>

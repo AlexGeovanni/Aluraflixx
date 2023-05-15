@@ -11,7 +11,14 @@ export const Btn = styled.button`
     background-color: rgba(42, 122, 228, 1);
 `
 
-export const BtnLimpia=styled(Btn)`
+export const BtnLimpia=styled.input`
+    color: #fff;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 13px 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
     margin-left: 40px;
     background-color: rgba(158, 158, 158, 1);
 `
@@ -97,12 +104,17 @@ export const ContentBtns = styled.div`
 // table
 export const Td = styled.td`
     padding: 10px;
-    border: ${({Bdnegro})=> Bdnegro? "4px solid #000": "none"};
+    /* :nth-last-child(odd){
+        border-top: 4px solid #e3ee;
+        border-left: 4px solid #e3ee;
+        border-right: 4px solid #e3ee;
+        border-bottom: 0px solid #e3ee;
+    } */
 `
 
 export const Th = styled.th`
     padding: 10px;
-    border: ${({Bdnegro})=> Bdnegro? "none": "4px solid #fff"};
+    border:  4px solid #fff;
 `
 
 // --------------------------
@@ -123,7 +135,7 @@ export const Img =styled.img`
     height: 100%;
 `
 
-export const TitiloCategoria =styled.div`
+export const TituloCategoria =styled.div`
     display: inline-block;
     background-color: #6BD1FF;
     border-radius: 4px;

@@ -5,7 +5,7 @@ import banner from "../../assets/img/banner.png"
 const Div = styled.div`
     position: absolute;
     overflow: hidden;
-    top: -100px;
+    top: -120px;
     left: 0;
     width: 100%;
     height: 880px;
