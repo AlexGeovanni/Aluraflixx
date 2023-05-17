@@ -139,9 +139,9 @@ const [categorias,setCategorias] =useState([
     <Router>
         <Header />
         <Routes>
-            <Route path='/' element={<Home  />} />
-            <Route path='/NuevoVideo' element={<NuevoVideo  />} />
-            <Route path='/NuevaCategoria' element={<NuevaCategoria />} />
+            <Route exact path='/' element={<Home  />} />
+            <Route exact path='/NuevoVideo' element={<NuevoVideo  />} />
+            <Route exact path='/NuevaCategoria' element={<NuevaCategoria />} />
             <Route exact path='/ActualizarVideo/:categoriId' element={<ActualizarVideo/>} />
         </Routes>
     </Router>
