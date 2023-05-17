@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { ContentInput,Input,Span } from "../UI"
 
 
-const Inputs =({titulo,tipo,ActualizarValor})=>{
+const Inputs =({titulo,tipo,ActualizarValor,valor})=>{
     
     const CambioValor=(e)=>{
         ActualizarValor(e.target.value)
@@ -10,7 +10,7 @@ const Inputs =({titulo,tipo,ActualizarValor})=>{
 
     return(
         <ContentInput>
-            <Input id={titulo} type={tipo}required onChange={CambioValor} />
+            <Input id={titulo} value={valor} type={tipo} required onChange={CambioValor} />
             <Span>{titulo}</Span>
         </ContentInput>
     )

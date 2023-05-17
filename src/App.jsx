@@ -8,6 +8,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Home from './pages/Home'
 import NuevoVideo from './pages/NuevoVideo'
 import NuevaCategoria from './pages/NuevaCategoria';
+import ActualizarVideo from './pages/ActualizarVideo'
 
 
 function App() {
@@ -132,7 +133,7 @@ const [categorias,setCategorias] =useState([
 }
 ]);
 
-  return (
+    return (
     <>
     <GlobalStyle />
     <Router>
@@ -141,6 +142,7 @@ const [categorias,setCategorias] =useState([
             <Route path='/' element={<Home  />} />
             <Route path='/NuevoVideo' element={<NuevoVideo  />} />
             <Route path='/NuevaCategoria' element={<NuevaCategoria />} />
+            <Route exact path='/ActualizarVideo/:categoriId' element={<ActualizarVideo/>} />
         </Routes>
     </Router>
     <Footer />

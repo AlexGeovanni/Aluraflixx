@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Td, Th } from "../UI"
-
+import { Link } from "react-router-dom"
 
 const Table = styled.table`
     border: 4px solid #fff;
@@ -28,9 +28,8 @@ const Div = styled.div`
     border-radius: 4px;
     padding: 8px 0;
     /* pointer events para que no pueden eliminar nada sin autorizacion */
-    pointer-events: none;
+    /* pointer-events: none; */
 `
-
 const H2 = styled.h2`
     font-size: 35px;
     font-weight: 400;
@@ -49,7 +48,6 @@ const Tr = styled.tr`
         background-color: #111010;
     }
 `
-
 const ContentTable =({categorias,EliminarCategoria})=>{
     
     return(
@@ -81,10 +79,12 @@ const ContentTable =({categorias,EliminarCategoria})=>{
                         <H3>{descripcion}</H3>
                     </Td>
                     <TdAcciones>
-                        <Div blue  onClick={()=>alert("edit")}>
+                    <Link to={ "/ActualizarVideo/"+id}>
+                        <Div blue >
                             <H3>Editar</H3>
                             <i className="fa-regular fa-pen-to-square"></i>
                         </Div>
+                    </Link>
                     </TdAcciones>
                     <TdAcciones >
                         <Div red  onClick={()=>EliminarCategoria(id)}>

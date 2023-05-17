@@ -6,7 +6,8 @@ import ContentCarousel from "../Carousels/ContentCarousel";
 import { useState } from "react";
 import { Api } from "../../api/ClienteService.js"
 import { useEffect } from "react";
-
+import ReactPlayer from "react-player/youtube";
+import { visualElementStore } from "framer-motion";
 
 const Section = styled.section`
     min-height: 850px;
@@ -16,6 +17,10 @@ const Section = styled.section`
     color: rgba(245, 245, 245, 1);
     position: relative;
     z-index: 0;
+    @media screen and (max-width: 768px){
+        padding:0 20px;
+        padding-bottom: 50px;
+    }
 `
 
 const Div = styled.div`
@@ -27,6 +32,14 @@ const Div = styled.div`
     & > div{
         width: 645px;
     }
+    @media (max-width:768px) {
+        padding-top: 100px;
+        flex-direction: column;
+        > div {
+            width: 100%;
+            margin: auto;
+        }
+    }
 `
 
 const H1 = styled.h1`
@@ -35,47 +48,56 @@ const H1 = styled.h1`
     font-weight: 400;
     line-height: 54px;
     margin-bottom: 10px;
+    @media screen  and (max-width:768px){
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: 300;
+    }
 `
 
 const Principal =(props)=>{
     const {equipos,categorias}=props;
 
-    const [videoInicio,setVideoInicio]=useState('Front End');
 
-    const [imgIncio,setImgInicio]=useState('https://www.youtube.com/watch?v=AG2QssLpQzI')
+    const [categoriaInicio,setCategoriaInicio]=useState('Front End');
+    const [ulrVideo,setUrlVideo]=useState('https://www.youtube.com/watch?v=AG2QssLpQzI&t=2s')
 
-    
 
     const ActualizarInicio =(titulo)=>{
-        setVideoInicio(titulo)
+        setCategoriaInicio(titulo)
     }
 
     const ActualizarVideoInicio=async(id)=>{
-        const {data}= await Api.get(`videos/${id}`)
-        setImgInicio(data.urlImg);
+        const res= await Api.get(`videos/${id}`)
+        if(res.status === 200){
+            return setUrlVideo(res.data.urlVideo)
+        }
     }
+
+
     return(
         <Section>
             <Banner />
             <>
                 {
                     categorias.map((categoria)=>{
-                            if(categoria.titulo === videoInicio){
+                            if(categoria.titulo === categoriaInicio){
                                 return <div key={categoria.id}>
                                     <Div>
                                         <div>
                                             <TituloCategoria style={{backgroundColor:categoria.colorPrimario}}>
-                                                <h1>{videoInicio}</h1>
+                                                <h1>{categoriaInicio}</h1>
                                             </TituloCategoria>
                                             <H1>Challenge React</H1>
                                             <P> Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React</P>
                                         </div>
-                                        <DivImg>
-                                            {/* <Img src={imgIncio} alt={videoInicio} />
-                                            <i className="fa-solid fa-play"></i> */}
-                                            
-                                            <iframe loading="lazy" width={"100%"} height={"100%"} src="https://www.youtube.com/watch?v=AG2QssLpQzI" 
-                                            rameborder="0" allowFullScreen="allowfullscreen"></iframe>
+                                        <DivImg>                                            
+                                            <ReactPlayer
+                                            width={"100%"}
+                                                url={ulrVideo}
+                                                loop
+                                                
+                                            />
                                         </DivImg>
                                     </Div>
                                     <ContentCarousel equipos={equipos.filter((equipo)=> equipo.categoria === categoria.titulo)} 
@@ -90,7 +112,7 @@ const Principal =(props)=>{
             </>
             {
                 categorias.map((categoria)=>{
-                    if(categoria.titulo != videoInicio){
+                    if(categoria.titulo != categoriaInicio){
                         return <Carosuel key={categoria.id} 
                                 categoria={categoria} 
                                 equipos={equipos.filter((equipo)=> equipo.categoria === categoria.titulo)} 

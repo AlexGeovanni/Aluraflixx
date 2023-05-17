@@ -4,7 +4,7 @@ import { ContentInput, Span,Textarea } from "../UI";
 
 
 const TextTarea=(props)=>{
-    const {titulo,ActualizarDescrip}= props;
+    const {titulo,valor,ActualizarDescrip}= props;
 
     const CambioValor=(e)=>{
         ActualizarDescrip(e.target.value)
@@ -12,7 +12,7 @@ const TextTarea=(props)=>{
 
     return(
         <ContentInput>
-            <Textarea rows={"5"}  cols={"30"} required onChange={CambioValor} />
+            <Textarea rows={"5"}  cols={"30"} value={valor} required onChange={CambioValor} />
             <Span>{titulo}</Span>
         </ContentInput>
     )

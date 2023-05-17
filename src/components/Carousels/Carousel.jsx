@@ -16,7 +16,7 @@ const Carosuel =(props)=>{
         <>{
                 equipos.length > 0 &&
                 <Div>
-                    <TituloCarusel titulo={titulo} colorPrimario={colorPrimario} ActualizarInicio={ActualizarInicio} />
+                    <TituloCarusel titulo={titulo} colorPrimario={colorPrimario} ActualizarInicio={ActualizarInicio}  />
                     <ContentCarousel equipos={equipos} ActualizarInicio={ActualizarInicio}  ActualizarVideoInicio={ActualizarVideoInicio}/>
                 </Div>
             }

@@ -44,6 +44,12 @@ const FormNuevaCategoria =()=>{
         setCategorias(data)
     }
 
+    const resetText =()=>{
+        setTitulo('')
+        setDescripcion('')
+        setColor('')
+        setCodigoS('')
+    }
 
     return(
         <Section>
@@ -52,27 +58,32 @@ const FormNuevaCategoria =()=>{
                 <Inputs 
                     tipo="text" 
                     titulo="titulo"
+                    valor={titulo}
                     ActualizarValor={setTitulo}
                 />
                 <TextTarea 
                     titulo="Descripcion"
                     ActualizarDescrip={setDescripcion}
+                    valor={descripcion}
                 />
                 <Inputs 
                     tipo="color" 
                     titulo="color"
                     ActualizarValor={setColor}
+                    valor={colorPrimario}
+
                 />
                 <Inputs 
                     tipo="text" 
                     titulo="Codigo de seguridad"
                     ActualizarValor={setCodigoS}
+                    valor={codigoS}
                 />
 
                 <ContentBtns>
                     <div>
                         <Btn>Guadar</Btn>
-                        <BtnLimpia type="reset" value="Limpiar" /> 
+                        <BtnLimpia type="reset" value="Limpiar" onClick={resetText} /> 
                     </div>
                 </ContentBtns>
             </Form>

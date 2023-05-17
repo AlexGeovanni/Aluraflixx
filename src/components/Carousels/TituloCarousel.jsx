@@ -6,12 +6,17 @@ const Div = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
+    @media (max-width:768px){
+        align-items:flex-start;
+        flex-direction: column;
+        gap: 0px;
+    }
 `
 
 const TituloCarusel=({titulo,colorPrimario,ActualizarInicio})=>{
     return(
         <Div>
-            <TituloCategoria style={{marginBottom:"20px",backgroundColor:colorPrimario}} onClick={()=>ActualizarInicio(titulo)}>
+            <TituloCategoria style={{marginBottom:"6px",backgroundColor:colorPrimario}} onClick={()=>ActualizarInicio(titulo)}>
                 <h1>{titulo}</h1>
             </TituloCategoria>
             <P>Formación {titulo} de Alura Latam</P>

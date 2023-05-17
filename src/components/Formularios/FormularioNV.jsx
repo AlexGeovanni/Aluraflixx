@@ -6,6 +6,19 @@ import ListaOpciones from "../ListaOpciones/ListaOpciones";
 import { useState } from "react";
 import { Api } from "../../api/ClienteService.js";
 import {v4 as uuidv4} from "uuid"
+import styled from "styled-components";
+
+const DivAcciones =styled.div`
+    @media screen and (max-width: 768px){
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+`
+
+
+
+
 
 
 const FormNuevoVideo =(props)=>{
@@ -65,10 +78,10 @@ const FormNuevoVideo =(props)=>{
                 />
 
                 <ContentBtns>
-                    <div>
+                    <DivAcciones>
                         <Btn>Guadar</Btn>
                         <BtnLimpia type="reset" value="Limpiar" /> 
-                    </div>
+                    </DivAcciones>
                     <Link to="/NuevaCategoria" ><Btn>Nueva Categoria</Btn></Link>
                 </ContentBtns>
             </Form>

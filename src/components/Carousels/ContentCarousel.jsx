@@ -17,6 +17,9 @@ const ItemsCarousel = styled(motion.div)`
 const Imgc =styled(Img)`
     width: 400px;
     pointer-events: none;
+    @media (max-width:768px){
+        width: 300px;
+    }
 `
 
 const ContentCarousel =({equipos,ActualizarInicio,ActualizarVideoInicio})=>{

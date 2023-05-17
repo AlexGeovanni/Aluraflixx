@@ -1,27 +1,62 @@
 import styled from "styled-components";
 
+export const LogoImg=styled.img`
+    width: 170px;
+    @media screen and (max-width: 768px){
+        width: 100px;
+    }
+`
+
+export const Section = styled.section`
+    background-color: rgba(0,0,0,.9);
+    padding: 50px 40px 100px;
+    height: 100%;
+    @media screen and (max-width: 768px){
+        padding:  30px 12px 100px;
+    }
+`
+export const ContentBtns = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: none;
+        gap:10px;
+    }
+`
 export const Btn = styled.button`
     color: #fff;
     font-size: 21px;
     font-weight: 600;
-    padding: 13px 25px;
+    padding: 17px 50px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
     background-color: rgba(42, 122, 228, 1);
+    @media screen and (max-width: 768px){
+        padding: 18px 35px;
+    }
 `
 
 export const BtnLimpia=styled.input`
     color: #fff;
     font-size: 21px;
     font-weight: 600;
-    padding: 13px 25px;
+    padding: 17px 50px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
     margin-left: 40px;
     background-color: rgba(158, 158, 158, 1);
+    @media screen and (max-width: 768px){
+        padding: 18px 35px;
+    }
 `
+
 
 export const ContentInput =styled.div`
     position: relative;
@@ -31,7 +66,7 @@ export const ContentInput =styled.div`
 export const Input = styled.input`
     width: 100%;
     font-size: 18px;
-    padding: 28px 10px;
+    padding: 25px 10px;
     outline: none;
     border: none;
     background: rgba(83, 88, 93, 1);
@@ -39,30 +74,40 @@ export const Input = styled.input`
     &:valid ~span ,
     &:focus ~span  {
         font-size: 14px; 
-        top: 8px;
+        top: 5px;
         transition: all .4s ease-in-out;
+        @media screen and (max-width: 768px){
+        font-size: 12px;
+        top: 2px
+    }
     }
     &[type="color"]{
         padding: 22px 10px 0px;
         height: 50px;
     }
+    @media screen and (max-width: 768px){
+        font-size: 16px;
+        padding: 14px 4px;
+    }
 `
+
 export const Span =styled.span`
     position: absolute;
-    top: 30px;
+    top: 25px;
     left: 10px;
     color: #fff;
     font-size: 18px;
     transition: all .3s ease-in-out;
     user-select: none;
+    pointer-events: none;
+    @media screen and (max-width: 768px){
+        font-size: 16px;
+        top: 14px;
+        left: 4px;
+    }
 `
 
 
-export const Section = styled.section`
-    background-color: rgba(0,0,0,.9);
-    padding: 50px 40px 100px;
-    height: 100%;
-`
 
 export const Form = styled.form`
     max-width:95%;
@@ -75,6 +120,10 @@ export const Title = styled.h1`
     font-size: 60px;
     font-weight: 400;
     text-align: center;
+    @media screen and (max-width: 768px){
+        font-size: 30px;
+        line-height: 41px;
+    }
 `
 export const Textarea = styled.textarea`
     width: 100%;
@@ -93,23 +142,11 @@ export const Textarea = styled.textarea`
     }
 `
 
-export const ContentBtns = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-`
+
 
 // table
 export const Td = styled.td`
     padding: 10px;
-    /* :nth-last-child(odd){
-        border-top: 4px solid #e3ee;
-        border-left: 4px solid #e3ee;
-        border-right: 4px solid #e3ee;
-        border-bottom: 0px solid #e3ee;
-    } */
 `
 
 export const Th = styled.th`
@@ -120,15 +157,18 @@ export const Th = styled.th`
 // --------------------------
 
 export const DivImg = styled.div`
-border-radius: 4px;
-border: 4px solid #6BD1FF;
+    border-radius: 4px;
+    border: 4px solid #6BD1FF;
 `
 
 export const P = styled.p`
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    @media screen and (max-width: 768px){
+        font-size: 12px;
+    }
 `
 export const Img =styled.img`
     width: 100%;
@@ -137,7 +177,6 @@ export const Img =styled.img`
 
 export const TituloCategoria =styled.div`
     display: inline-block;
-    background-color: #6BD1FF;
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 45px;
@@ -148,5 +187,12 @@ export const TituloCategoria =styled.div`
         font-style: normal;
         text-align: center;
         line-height: 70px;
+    }
+    @media (max-width:768px){
+        margin-bottom: 20px;
+        h1{
+            font-size: 16px;
+            line-height: 40px;
+        }
     }
 `
