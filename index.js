@@ -1,6 +1,5 @@
-import  jsonSever  from 'json-server';
-
-// const jsonServer = require('json-server');
+// import  jsonSever  from 'json-server';
+const jsonSever = require('json-server');
 const server = jsonSever.create();
 const router = jsonSever.router('./aluraflix.json');
 const middlewares = jsonSever.defaults();
