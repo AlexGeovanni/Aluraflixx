@@ -87,7 +87,7 @@ export const Input = styled.input`
     }
     @media screen and (max-width: 768px){
         font-size: 16px;
-        padding: 14px 4px;
+        padding: 18px 4px 8px;
     }
 `
 
@@ -102,7 +102,7 @@ export const Span =styled.span`
     pointer-events: none;
     @media screen and (max-width: 768px){
         font-size: 16px;
-        top: 14px;
+        top: 18px;
         left: 4px;
     }
 `

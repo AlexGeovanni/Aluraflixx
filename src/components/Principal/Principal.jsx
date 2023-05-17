@@ -22,6 +22,11 @@ const Section = styled.section`
         padding-bottom: 50px;
     }
 `
+const DivVideo =styled(DivImg)`
+    @media screen and (max-width:768px) {
+        height: 230px;
+    }
+`
 
 const Div = styled.div`
     padding-top:260px;
@@ -35,13 +40,13 @@ const Div = styled.div`
     @media (max-width:768px) {
         padding-top: 100px;
         flex-direction: column;
+        gap: 25px;
         > div {
             width: 100%;
             margin: auto;
         }
     }
 `
-
 const H1 = styled.h1`
     font-size: 36px;
     font-style: normal;
@@ -91,14 +96,15 @@ const Principal =(props)=>{
                                             <H1>Challenge React</H1>
                                             <P> Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React</P>
                                         </div>
-                                        <DivImg>                                            
+                                        <DivVideo>                                            
                                             <ReactPlayer
                                             width={"100%"}
+                                            height={"100%"}
                                                 url={ulrVideo}
                                                 loop
                                                 
                                             />
-                                        </DivImg>
+                                        </DivVideo>
                                     </Div>
                                     <ContentCarousel equipos={equipos.filter((equipo)=> equipo.categoria === categoria.titulo)} 
                                     ActualizarInicio={ActualizarInicio}
