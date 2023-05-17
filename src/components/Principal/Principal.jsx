@@ -23,8 +23,10 @@ const Section = styled.section`
     }
 `
 const DivVideo =styled(DivImg)`
+    height: auto;
     @media screen and (max-width:768px) {
         height: 230px;
+
     }
 `
 
