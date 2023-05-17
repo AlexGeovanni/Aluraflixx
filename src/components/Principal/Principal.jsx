@@ -25,8 +25,6 @@ const Section = styled.section`
 const DivVideo =styled(DivImg)`
     @media screen and (max-width:768px) {
         height: 230px;
-        position: sticky;
-        top: 20px;
     }
 `
 
