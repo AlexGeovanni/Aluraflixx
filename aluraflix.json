@@ -1,0 +1,158 @@
+{
+  "videos": [
+    {
+      "id": "9fa1863c-fe75-4fae-937e-1422ecfce82f",
+      "urlVideo": "https://www.youtube.com/watch?v=AG2QssLpQzI&t=2s",
+      "urlImg": "https://i.ytimg.com/vi/AG2QssLpQzI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbUU2Mf8CAJ3sB0P3Lf5XVkbyYMQ",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "eb94892b-9039-4fd0-92ee-d495e3aeade9",
+      "urlVideo": "https://www.youtube.com/watch?v=rpvrLaBQwgg&t=375s",
+      "urlImg": "https://i.ytimg.com/vi/rpvrLaBQwgg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJK_72imvkPUftCR6i52lfmAwR2A",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "843f3798-5abd-45a0-a3de-f4bb65af667b",
+      "urlVideo": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "urlImg": "https://i.ytimg.com/vi/t-iqt1b2qqk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvHzi_mOtKXBpQWhCpa0KUn52vow",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "3ca551da-3dfa-4495-bf44-7e294cabb51e",
+      "urlVideo": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
+      "urlImg": "https://i.ytimg.com/vi/GJfOSoaXk4s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKpxz6vMwTw26HQyprrrwHFadQ2g",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "36cc54a0-e911-4717-b639-f86b5807624b",
+      "urlVideo": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
+      "urlImg": "https://i.ytimg.com/vi/cLLKVd5CNLc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoAq6RVkWNnROKxhWbny5h0GbMwA",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "c1d298b9-15da-444a-9692-bdf22fab8d82",
+      "urlVideo": "https://www.youtube.com/watch?v=-LmFK6skG7s",
+      "urlImg": "https://i.ytimg.com/vi/UuAX5azcvDQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIgMyXxVqSIC310Cq0_iicekvCkQ",
+      "categoria": "Front End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "e4a9393e-0eac-4d36-918b-da789040fff1",
+      "urlVideo": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+      "urlImg": "https://i.ytimg.com/vi/EoPvlE85XAQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPs_pZWDQJClLViVgQYyfBgD8qkw",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "3ea8df5c-10c4-4482-8a19-f943f794f4f2",
+      "urlVideo": "https://www.youtube.com/watch?v=vhwspfvI52k",
+      "urlImg": "https://i.ytimg.com/vi/vhwspfvI52k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB69jh2_4uiilDUzFYKS6IZMQh5Ag",
+      "categoria": "Innovación y Gestión",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "bb07a657-8194-443e-a2a0-c0fccde929da",
+      "urlVideo": "https://www.youtube.com/watch?v=G1cDRqKuxpg",
+      "urlImg": "https://i.ytimg.com/vi/G1cDRqKuxpg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEwV2ndlV0y65IJ71gQVC8d9VKxg",
+      "categoria": "Back End",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "8462dcd9-9bb9-485d-836b-52385898f5d8",
+      "urlVideo": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "urlImg": "https://i.ytimg.com/vi/YhR7Zp8NUzE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6UTsxfxASIvP5FfJBLJcV7Fykuw",
+      "categoria": "Innovación y Gestión",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "8c891014-2554-46df-8f99-aa5318f4ec28",
+      "urlVideo": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImg": "https://i.ytimg.com/vi/6N3OkLCfK-0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDq1E4lzcafq884jsP44Nu4YGTDg",
+      "categoria": "Innovación y Gestión",
+      "descripcion": "",
+      "codigoS": ""
+    },
+    {
+      "id": "a1c4c75d-9f2a-4526-b9fd-3361d0737526",
+      "urlVideo": "https://www.youtube.com/watch?v=_zYbZ5S0VMw",
+      "urlImg": "https://i.ytimg.com/vi/_zYbZ5S0VMw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3jN7HRrXJqNgydVEh5dgiO6jEBA",
+      "categoria": "Git",
+      "descripcion": "",
+      "codigoS": ""
+    }
+  ],
+  "categorias": [
+    {
+      "id": "a049fc6c-1728-4826-9488-cbda893b3717",
+      "titulo": "Front End",
+      "colorPrimario": "#6BD1FF",
+      "descripcion": "Todos los videos que estoy usando para estudiar Front End.",
+      "codigoS": "fronnt"
+    },
+    {
+      "id": "83ac08c4-6b41-47b5-809d-d024fa2bc3de",
+      "titulo": "Back End",
+      "colorPrimario": "#00C86F",
+      "descripcion": "Todos los videos que estoy usando para estudiar Back End.",
+      "codigoS": "Bacckk"
+    },
+    {
+      "id": "db2acab7-5f05-42c2-b61d-01987db02993",
+      "titulo": "Mobile",
+      "colorPrimario": "#FFBA05",
+      "descripcion": "Contenido que vengo estudiando sobre React Native y Flutter",
+      "codigoS": "mobille"
+    },
+    {
+      "id": "eb08f4b3-ffce-48ce-b0d9-6a4660120dbb",
+      "titulo": "Infraestrutura",
+      "colorPrimario": "#9CD33B",
+      "descripcion": "Todo lo que estoy aprendiendo sobre Docker y mucho mas",
+      "codigoS": "infraesst"
+    },
+    {
+      "id": "8248da26-7566-4d3f-8467-02be8f8596b5",
+      "titulo": "Design & UX",
+      "colorPrimario": "#DC6EBE",
+      "descripcion": "Herramientas y técnicas que esudio sobre UX y Design",
+      "codigoS": "Dessse"
+    },
+    {
+      "id": "740599fb-8578-4daa-aedc-6880cf586bb2",
+      "titulo": "Marketing Digital",
+      "colorPrimario": "#6B5BE2",
+      "descripcion": "La forma de vender y monetizar mis ideas",
+      "codigoS": "Markk"
+    },
+    {
+      "id": "0414ddd1-a10b-4e73-979d-4aedc8ac26f1",
+      "titulo": "Innovación y Gestión",
+      "colorPrimario": "#FF8C2A",
+      "descripcion": "Como mantener el equipo felíz y mucho mas.",
+      "codigoS": "Innovacionn"
+    },
+    {
+      "id": "6d61d8a7-4ad2-421f-bf33-2992335bdc90",
+      "titulo": "Git",
+      "colorPrimario": "#f7ef08",
+      "descripcion": "Herramientas y técnicas que esudio sobre Git",
+      "codigoS": "Giiit"
+    }
+  ]
+}

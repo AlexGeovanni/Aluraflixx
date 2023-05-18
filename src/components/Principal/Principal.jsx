@@ -78,7 +78,7 @@ const Principal =(props)=>{
     }
 
     const ActualizarVideoInicio=async(id)=>{
-        const res= await Api.get(`videos/${id}`)
+        const res = await Api.get(`videos/${id}`)
         if(res.status === 200){
             return setUrlVideo(res.data.urlVideo)
         }

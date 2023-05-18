@@ -25,7 +25,7 @@ const FormNuevaCategoria =()=>{
     },[])
 
     const EnviarDatos=async(e)=>{
-        e.preventDefault()
+        e.preventDefault();
         const datos ={
             id:uuidv4(),
             titulo,
@@ -33,15 +33,18 @@ const FormNuevaCategoria =()=>{
             descripcion,
             codigoS
         }
-        await Api.post('categorias',datos);
-        const{data}= await Api.get("categorias");
-        setCategorias(data)
+        const dat= await Api.post('categorias',datos);
+        console.log(dat)
+        // if(dat.status == 200){
+            const{data}= await Api.get("categorias");
+            setCategorias(data) 
+        // }
     }
 
-    const EliminarCategoria=async(id)=>{
+    const EliminarCategoria = async(id)=>{
         await Api.delete(`categorias/${id}`);
-        const{data}= await Api.get("categorias");
-        setCategorias(data)
+        const {data}= await Api.get("categorias");
+        setCategorias(data) 
     }
 
     const resetText =()=>{
@@ -91,7 +94,6 @@ const FormNuevaCategoria =()=>{
         </Section>
     )
 }
-
 
 export default FormNuevaCategoria
 
