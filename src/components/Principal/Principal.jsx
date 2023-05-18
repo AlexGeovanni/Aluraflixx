@@ -1,13 +1,11 @@
 import styled from "styled-components";
 import Banner from "../Banner/Banner";
 import Carosuel from "../Carousels/Carousel";
-import { DivImg, Img, P, TituloCategoria } from "../UI";
+import { DivImg, P, TituloCategoria } from "../UI";
 import ContentCarousel from "../Carousels/ContentCarousel";
 import { useState } from "react";
 import { Api } from "../../api/ClienteService.js"
-import { useEffect } from "react";
 import ReactPlayer from "react-player/youtube";
-import { visualElementStore } from "framer-motion";
 
 const Section = styled.section`
     min-height: 850px;
@@ -23,10 +21,12 @@ const Section = styled.section`
     }
 `
 const DivVideo =styled(DivImg)`
-    height: auto;
+    height: 385px;
+    @media screen and (max-width:1100px) {
+        height: 300px;
+    }
     @media screen and (max-width:768px) {
-        height: 230px;
-
+        height: 220px;
     }
 `
 
@@ -55,6 +55,9 @@ const H1 = styled.h1`
     font-weight: 400;
     line-height: 54px;
     margin-bottom: 10px;
+    @media screen and (max-width:1200px) {
+        font-size: 32px;
+    }
     @media screen  and (max-width:768px){
         font-size: 27px;
         line-height: 32px;

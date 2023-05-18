@@ -17,8 +17,11 @@ const ItemsCarousel = styled(motion.div)`
 const Imgc =styled(Img)`
     width: 400px;
     pointer-events: none;
+    @media screen and (max-width: 1100px){
+        width: 370px;
+    }
     @media (max-width:768px){
-        width: 300px;
+        width: 280px;
     }
 `
 

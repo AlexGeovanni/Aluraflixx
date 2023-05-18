@@ -4,15 +4,19 @@ import { Link } from "react-router-dom"
 
 const Table = styled.table`
     border: 4px solid #fff;
-    max-width: 95%;
+    width: 100%;
     color: #fff;
     width: 100%;
     margin: auto;
     margin-top: 30px;
+    @media screen and (min-width:1100px) {
+        max-width: 95%;
+    }
 `
 
 const ThNombre = styled(Th)`
     width: 25%;
+    
 `
 const TdAcciones=styled(Td)`
     text-align: center;
@@ -29,14 +33,33 @@ const Div = styled.div`
     padding: 8px 0;
     /* pointer events para que no pueden eliminar nada sin autorizacion */
     /* pointer-events: none; */
+    @media screen and (max-width:1100px) {
+        gap: 5px;
+    }
+    @media screen and (max-width:768px) {
+        gap: 5px;
+        padding: 4px 5px;
+    }
 `
 const H2 = styled.h2`
     font-size: 35px;
     font-weight: 400;
+    @media screen and (max-width:1100px) {
+        font-size:22px;
+    }
+    @media screen and (max-width:768px) {
+        font-size:16px;
+    }
 `
 const H3 = styled.h3`
     font-size: 22px;
     font-weight: 300;
+    @media screen and (max-width:1100px) {
+        font-size:17px;
+    }
+    @media screen and (max-width:768px) {
+        font-size:12px;
+    }
 `
 
 const Tr = styled.tr`

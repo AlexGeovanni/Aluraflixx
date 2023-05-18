@@ -100,6 +100,7 @@ export const Span =styled.span`
     transition: all .3s ease-in-out;
     user-select: none;
     pointer-events: none;
+    
     @media screen and (max-width: 768px){
         font-size: 16px;
         top: 18px;
@@ -147,11 +148,24 @@ export const Textarea = styled.textarea`
 // table
 export const Td = styled.td`
     padding: 10px;
+    @media screen and (max-width: 1100px){
+        padding: 7px;
+    }
+    @media screen and (max-width: 768px){
+        padding: 5px;
+    }
 `
 
 export const Th = styled.th`
     padding: 10px;
     border:  4px solid #fff;
+    @media screen and (max-width: 1100px){
+        padding: 7px;
+    }
+    @media screen and (max-width: 768px){
+        padding: 5px;
+    }
+    
 `
 
 // --------------------------
@@ -166,6 +180,9 @@ export const P = styled.p`
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
+    @media screen and (max-width: 1100px){
+        font-size: 16px;
+    }
     @media screen and (max-width: 768px){
         font-size: 12px;
     }
@@ -187,6 +204,11 @@ export const TituloCategoria =styled.div`
         font-style: normal;
         text-align: center;
         line-height: 70px;
+    }
+    @media screen and (max-width:1100px) {
+        h1{
+            font-size: 25px;
+        }
     }
     @media (max-width:768px){
         margin-bottom: 20px;
