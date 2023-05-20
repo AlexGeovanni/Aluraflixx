@@ -6,6 +6,7 @@ const Div = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-bottom: 18px;
     @media (max-width:768px){
         align-items:flex-start;
         flex-direction: column;

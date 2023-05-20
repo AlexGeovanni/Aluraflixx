@@ -9,13 +9,14 @@ import { useState,useEffect } from "react"
 
 
 const FormNuevaCategoria =()=>{
-
+    // guardar los valores de los inputs y textos
     const [titulo,setTitulo]=useState('');
     const [descripcion,setDescripcion]=useState('');
-    const [colorPrimario,setColor]=useState('#000000');
+    const [colorPrimario,setColor]=useState('#000000');  // inicializamos el colore negro por default
     const [codigoS,setCodigoS]=useState('');
     const [categorias,setCategorias]= useState([])
 
+    // carga la cosulta de todas la cetegorias para luego ser mostrado en la tabla
     useEffect(()=>{
         const ConsultaApi=async()=>{
             const{data}= await Api.get("categorias");
@@ -24,36 +25,37 @@ const FormNuevaCategoria =()=>{
         ConsultaApi();
     },[])
 
+    /* capturamos los datos y lo enviamos para nuevo dato, se vuelve hacer la cosulta para
+|       actualizar las categorias*/
     const EnviarDatos=async(e)=>{
         e.preventDefault();
-        const datos ={
+        const data ={
             id:uuidv4(),
             titulo,
             colorPrimario,
             descripcion,
             codigoS
         }
-        const dat= await Api.post('categorias',datos);
-        console.log(dat)
-        // if(dat.status == 200){
-            const{data}= await Api.get("categorias");
-            setCategorias(data) 
-        // }
+        await Api.post('categorias',data);
+        const dato= await Api.get("categorias");
+        setCategorias(dato.data) 
     }
 
+    // eliminamos una categoria
     const EliminarCategoria = async(id)=>{
         await Api.delete(`categorias/${id}`);
         const {data}= await Api.get("categorias");
         setCategorias(data) 
     }
 
+    // Limpia todos los inputs
     const resetText =()=>{
         setTitulo('')
         setDescripcion('')
-        setColor('')
+        setColor('#000000')
         setCodigoS('')
     }
-
+    console.log(uuidv4())
     return(
         <Section>
             <Title>Nueva Categoría</Title>

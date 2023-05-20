@@ -3,7 +3,7 @@ import { Td, Th } from "../UI"
 import { Link } from "react-router-dom"
 
 const Table = styled.table`
-    border: 4px solid #fff;
+    border: 2px solid #fff;
     width: 100%;
     color: #fff;
     width: 100%;
@@ -11,6 +11,7 @@ const Table = styled.table`
     margin-top: 30px;
     @media screen and (min-width:1100px) {
         max-width: 95%;
+        border: 4px solid #fff;
     }
 `
 

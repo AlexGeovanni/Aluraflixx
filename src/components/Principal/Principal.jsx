@@ -20,16 +20,64 @@ const Section = styled.section`
         padding-bottom: 50px;
     }
 `
+const Icon = styled.div`
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    i{
+        position: relative;
+        font-size: 35px;
+        color: rgb(255, 255, 255);
+        ::after{
+            position: absolute;
+            content: '';
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            top: 8px;
+            right: 7px;
+            width: 20px;
+            height: 22px;
+            background-color: #000000;
+            z-index: -1;
+        }
+        :hover{
+            color: #000000;
+        }
+        :hover::after{
+            background-color: #ffffff;
+        }
+    }
+    @media (max-width:768px){
+        flex-direction: column-reverse;
+        align-items: end;
+        gap: 0px;
+        bottom: 30px;
+        right: 15px;
+        i{
+            font-size: 30px;
+            ::after{
+            top: 5px;
+            right: 4px;
+            width: 15px;
+            height: 18px;
+        }
+        }
+    }
+    
+`
 const DivVideo =styled(DivImg)`
     height: 385px;
     @media screen and (max-width:1100px) {
         height: 300px;
     }
     @media screen and (max-width:768px) {
-        height: 220px;
+        height: 230px;
     }
 `
-
 const Div = styled.div`
     padding-top:260px;
     display: flex;
@@ -68,10 +116,10 @@ const H1 = styled.h1`
 const Principal =(props)=>{
     const {equipos,categorias}=props;
 
-
     const [categoriaInicio,setCategoriaInicio]=useState('Front End');
-    const [ulrVideo,setUrlVideo]=useState('https://www.youtube.com/watch?v=AG2QssLpQzI&t=2s')
+    const [ulrVideo,setUrlVideo]=useState('https://www.youtube.com/watch?v=AG2QssLpQzI&t=2s');
 
+    const [clickIcon,setClickIcon] = useState(false)
 
     const ActualizarInicio =(titulo)=>{
         setCategoriaInicio(titulo)
@@ -84,9 +132,16 @@ const Principal =(props)=>{
         }
     }
 
-
     return(
         <Section>
+            <Icon >
+                {
+                    clickIcon &&  <P style={{fontWeight:"600"}}>Haz doble cick sobre la imagen para ver el video</P>
+                }
+                <i className="fa-solid fa-circle-info" 
+                onClick={()=> setClickIcon(!clickIcon)}
+                ></i>
+            </Icon>
             <Banner />
             <>
                 {

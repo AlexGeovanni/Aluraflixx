@@ -1,17 +1,20 @@
 # E-commerce
 Challenge AluraFlix
 
-En este proyecto utilize las siguientes tecnologias
-* React js (Axios,useState,useEffect)
+En este proyecto utilize las siguientes herramientas
+* React js (Axios, useState, useEffect,react-router)
+* framer-motio - para hacer el carousel
 * HTML
 * CSS (Styled compnents de react)
 * Java Script
 * Json-Server
 * Modulos JS
 
-Utilize vercel para alojar aluraflix.json y simular los datos 
+Utilize Azure Devops para alojar db.json y simular los datos en tiempo real
 
-## Esta página cuenta con todas las funcionalidades de un CRUD 
+## Uso
 
-* CRATE, READ, UPDATE, DELETE productos
+Aluraflix es un app web para ver videos respecto a Alura, lo cual los usuarios pueden escoger en tipo de categoria que quisieran ver, por otra parte
+pueden crear videos y categorias, eliminar o actualizar, lo recomendado es que para crear un video es que sea desde un pc o laptop, la interacción es 
+facil para los usuarios.
 

@@ -161,9 +161,11 @@ export const Th = styled.th`
     border:  4px solid #fff;
     @media screen and (max-width: 1100px){
         padding: 7px;
+        border:  2px solid #fff;
     }
     @media screen and (max-width: 768px){
         padding: 5px;
+        border:  2px solid #fff;
     }
     
 `
@@ -173,6 +175,13 @@ export const Th = styled.th`
 export const DivImg = styled.div`
     border-radius: 4px;
     border: 4px solid #6BD1FF;
+    height: 255px;
+    @media screen and (max-width: 1100px){
+        height: 230px;
+    }
+    @media (max-width:768px){
+        height: 170px;
+    }
 `
 
 export const P = styled.p`
