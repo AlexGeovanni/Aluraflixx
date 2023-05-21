@@ -72,7 +72,7 @@ const Tr = styled.tr`
         background-color: #111010;
     }
 `
-const ContentTable =({categorias,EliminarCategoria})=>{
+const ContentTable =({Datos,EliminaDato,tipo})=>{
     
     return(
         <Table >
@@ -94,16 +94,16 @@ const ContentTable =({categorias,EliminarCategoria})=>{
             </thead>
             <tbody >
                 {
-                    categorias.map(({titulo,descripcion,id},i)=>{
+                    Datos.map((element,i)=>{
                     return  <Tr key={i}>
                     <Td>
-                        <H3>{titulo}</H3>
+                        <H3>{element.titulo}</H3>
                     </Td>
                     <Td>
-                        <H3>{descripcion}</H3>
+                        <H3>{`${element.descripcion.slice(0,90)}${element.urlVideo? "...":""}`}</H3>
                     </Td>
                     <TdAcciones>
-                    <Link to={ "/ActualizarVideo/"+id}>
+                    <Link to={ tipo? "/ActualizarCategoria/"+ element.id:"/ActualizarVideo/"+element.id }>
                         <Div blue >
                             <H3>Editar</H3>
                             <i className="fa-regular fa-pen-to-square"></i>
@@ -111,7 +111,7 @@ const ContentTable =({categorias,EliminarCategoria})=>{
                     </Link>
                     </TdAcciones>
                     <TdAcciones >
-                        <Div red  onClick={()=>EliminarCategoria(id)}>
+                        <Div red  onClick={()=>EliminaDato(element.id)}>
                             <H3>Remover</H3>
                             <i className="fa-solid fa-trash"></i>
                         </Div>

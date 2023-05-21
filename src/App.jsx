@@ -8,6 +8,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Home from './pages/Home'
 import NuevoVideo from './pages/NuevoVideo'
 import NuevaCategoria from './pages/NuevaCategoria';
+import ActualizarCategoria from './pages/ActualizarCategoria'
 import ActualizarVideo from './pages/ActualizarVideo'
 
 
@@ -142,7 +143,8 @@ const [categorias,setCategorias] =useState([
             <Route exact path='/' element={<Home  />} />
             <Route exact path='/NuevoVideo' element={<NuevoVideo  />} />
             <Route exact path='/NuevaCategoria' element={<NuevaCategoria />} />
-            <Route exact path='/ActualizarVideo/:categoriId' element={<ActualizarVideo/>} />
+            <Route exact path='/ActualizarCategoria/:categoriId' element={<ActualizarCategoria/>} />
+            <Route exact path='/ActualizarVideo/:videoId' element={<ActualizarVideo />} />
         </Routes>
     </Router>
     <Footer />

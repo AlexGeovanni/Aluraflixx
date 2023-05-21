@@ -14,6 +14,7 @@ const FormNuevaCategoria =()=>{
     const [descripcion,setDescripcion]=useState('');
     const [colorPrimario,setColor]=useState('#000000');  // inicializamos el colore negro por default
     const [codigoS,setCodigoS]=useState('');
+
     const [categorias,setCategorias]= useState([])
 
     // carga la cosulta de todas la cetegorias para luego ser mostrado en la tabla
@@ -55,7 +56,8 @@ const FormNuevaCategoria =()=>{
         setColor('#000000')
         setCodigoS('')
     }
-    console.log(uuidv4())
+
+
     return(
         <Section>
             <Title>Nueva Categoría</Title>
@@ -92,7 +94,7 @@ const FormNuevaCategoria =()=>{
                     </div>
                 </ContentBtns>
             </Form>
-            <ContentTable categorias={categorias} EliminarCategoria={EliminarCategoria} />
+            <ContentTable Datos={categorias} EliminaDato={EliminarCategoria}  tipo={true} />
         </Section>
     )
 }

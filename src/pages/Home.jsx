@@ -24,7 +24,7 @@ const Home = ()=>{
 
     return(
         <>
-        <Principal equipos={equipos} categorias={categorias}  />
+            <Principal equipos={equipos} categorias={categorias}  />
         </>
     )
 }

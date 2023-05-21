@@ -16,17 +16,19 @@ const Select = styled.select`
 
 
 const ListaOpciones =(props)=>{
-    const {categorias,ActualizarCategoria}= props;
+    const {categorias,ActualizarCategoria,valor}= props;
     const CambioValor=(e)=>{
         ActualizarCategoria(e.target.value)
     }
     return(
         <ContentInput>
             <Select  onChange={CambioValor}>
-                <option value="" defaultValue="" hidden>Escoja una categoria</option>
+                {valor?  <option value={valor}>{valor}</option >: <option value="" defaultValue="" hidden>Escoja una categoria</option> }
+               
                 {
                     categorias.map((titulo)=>{
-                        return <option key={titulo}>{titulo}</option>
+                        if(titulo != valor)
+                            return <option key={titulo}>{titulo}</option>
                     })
                 }
             </Select>

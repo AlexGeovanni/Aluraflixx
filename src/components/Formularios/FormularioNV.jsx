@@ -3,10 +3,11 @@ import Inputs from "../Campos/Inputs";
 import TextTarea from "../Campos/Textarea";
 import { Link } from "react-router-dom";
 import ListaOpciones from "../ListaOpciones/ListaOpciones";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Api } from "../../api/ClienteService.js";
 import {v4 as uuidv4} from "uuid"
 import styled from "styled-components";
+import ContentTable from "../Table/Table";
 
 const DivAcciones =styled.div`
     @media screen and (max-width: 768px){
@@ -24,11 +25,23 @@ const DivAcciones =styled.div`
 const FormNuevoVideo =(props)=>{
     const [titulo,setTitulo]=useState('');
     const [urlVideo,setUrlVideo]=useState('');
-    const [urlImg,setUrlImg]=useState('');
+    const [urlImg,setUrlImg]=useState('https://i.ytimg.com/vi//maxresdefault.jpg');
     const [categoria,setCategoria]=useState('');
     const [descripcion,setDescripcion]=useState('');
     const [codigoS,setCodigoS]=useState('');
     
+    const [videos,setVideos]= useState([])
+
+    // carga la cosulta de todas la cetegorias para luego ser mostrado en la tabla
+    useEffect(()=>{
+        const ConsultaApi=async()=>{
+            const{data}= await Api.get("videos");
+            setVideos(data)
+        }
+        ConsultaApi();
+    },[])
+
+
     const EnviarDatos=async(e)=>{
         e.preventDefault()
         const datos ={
@@ -41,9 +54,28 @@ const FormNuevoVideo =(props)=>{
             codigoS
         }
         await Api.post("videos",datos);
+        const{data}= await Api.get("videos");
+        setVideos(data)
     }
 
+    const EliminarVideo = async(id)=>{
+        await Api.delete(`videos/${id}`);
+        const {data}= await Api.get("videos");
+        setVideos(data) 
+    }
 
+    const resetText =()=>{
+        setTitulo('')
+        setDescripcion('')
+        setUrlVideo('')
+        setCodigoS('')
+    }
+    const url =(urlV)=>{
+        const img = urlV.slice(-11)
+        setUrlVideo(urlV)
+        setUrlImg(`https://i.ytimg.com/vi/${img}/maxresdefault.jpg`);
+        return null
+    }
     return(
         <Section>
             <Title>Nuevo Video</Title>
@@ -51,20 +83,23 @@ const FormNuevoVideo =(props)=>{
                 <Inputs 
                     tipo="text" 
                     titulo="Titulo"
+                    valor={titulo}
                     ActualizarValor={setTitulo}
                 />
                 <Inputs
                     tipo="text" 
                     titulo="Link del video"
-                    ActualizarValor={setUrlVideo}
+                    valor={urlVideo}
+                    ActualizarValor={url}
                 />
                 <Inputs 
                     tipo="text" 
                     titulo="Link del imagen del video"
-                    ActualizarValor={setUrlImg}
+                    valor={urlImg}
                 />
                 <ListaOpciones 
                     categorias={props.categorias} 
+                    valor={categoria}
                     ActualizarCategoria={setCategoria}
                 />
                 <TextTarea 
@@ -74,17 +109,19 @@ const FormNuevoVideo =(props)=>{
                 <Inputs 
                     tipo="text" 
                     titulo="Codigo de seguridad"
+                    valor={codigoS}
                     ActualizarValor={setCodigoS}
                 />
 
                 <ContentBtns>
                     <DivAcciones>
                         <Btn>Guadar</Btn>
-                        <BtnLimpia type="reset" value="Limpiar" /> 
+                        <BtnLimpia type="reset" value="Limpiar" onClick={resetText} /> 
                     </DivAcciones>
                     <Link to="/NuevaCategoria" ><Btn>Nueva Categoria</Btn></Link>
                 </ContentBtns>
             </Form>
+            <ContentTable Datos={videos} EliminaDato={EliminarVideo} />
         </Section>
     )
 }

@@ -117,7 +117,7 @@ const Principal =(props)=>{
     const {equipos,categorias}=props;
 
     const [categoriaInicio,setCategoriaInicio]=useState('Front End');
-    const [ulrVideo,setUrlVideo]=useState('https://www.youtube.com/watch?v=AG2QssLpQzI&t=2s');
+    const [ulrVideo,setUrlVideo]=useState('https://www.youtube.com/watch?v=PztCEdIJITY&t=214s');
 
     const [clickIcon,setClickIcon] = useState(false)
 

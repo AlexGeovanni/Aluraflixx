@@ -36,6 +36,10 @@ export const Btn = styled.button`
     cursor: pointer;
     border: none;
     border-radius: 4px;
+    :hover{
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+    }
     background-color: rgba(42, 122, 228, 1);
     @media screen and (max-width: 768px){
         padding: 18px 35px;
@@ -51,6 +55,10 @@ export const BtnLimpia=styled.input`
     border: none;
     border-radius: 4px;
     margin-left: 40px;
+    :hover{
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+    }
     background-color: rgba(158, 158, 158, 1);
     @media screen and (max-width: 768px){
         padding: 18px 35px;
