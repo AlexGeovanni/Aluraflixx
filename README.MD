@@ -1,4 +1,4 @@
-# E-commerce
+# AluraFlix
 Challenge AluraFlix
 
 En este proyecto utilize las siguientes herramientas
