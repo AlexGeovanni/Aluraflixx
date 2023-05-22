@@ -6,22 +6,31 @@ import ContentTable from "../Table/Table";
 import {v4 as uuidv4} from "uuid";
 import { Api } from "../../api/ClienteService.js";
 import { useState,useEffect } from "react"
+import Loader from "../Loader/Loader";
 
 
 const FormNuevaCategoria =()=>{
+    
     // guardar los valores de los inputs y textos
     const [titulo,setTitulo]=useState('');
     const [descripcion,setDescripcion]=useState('');
     const [colorPrimario,setColor]=useState('#000000');  // inicializamos el colore negro por default
     const [codigoS,setCodigoS]=useState('');
 
-    const [categorias,setCategorias]= useState([])
+    const [categorias,setCategorias]= useState([]);
+
+    const [loading,setLoading]= useState(false);
 
     // carga la cosulta de todas la cetegorias para luego ser mostrado en la tabla
     useEffect(()=>{
         const ConsultaApi=async()=>{
-            const{data}= await Api.get("categorias");
-            setCategorias(data)
+            const res= await Api.get("categorias");
+            if(res.status==200){ 
+                setCategorias(res.data)
+                setTimeout(()=>{
+                    setLoading(true)
+                },2500)
+            }
         }
         ConsultaApi();
     },[])
@@ -37,9 +46,15 @@ const FormNuevaCategoria =()=>{
             descripcion,
             codigoS
         }
-        await Api.post('categorias',data);
-        const dato= await Api.get("categorias");
-        setCategorias(dato.data) 
+        const post = await Api.post('categorias',data);
+        if(post.status==201){
+            setLoading(false)
+            const res= await Api.get("categorias");
+            setCategorias(res.data) 
+            setTimeout(()=>{
+                setLoading(true)
+            },2500)
+        }
     }
 
     // eliminamos una categoria
@@ -94,7 +109,7 @@ const FormNuevaCategoria =()=>{
                     </div>
                 </ContentBtns>
             </Form>
-            <ContentTable Datos={categorias} EliminaDato={EliminarCategoria}  tipo={true} />
+            {loading? <ContentTable Datos={categorias} EliminaDato={EliminarCategoria}  tipo={true} />: <Loader />}
         </Section>
     )
 }

@@ -122,6 +122,7 @@ export const Form = styled.form`
     max-width:95%;
     width: 100%;
     margin: auto;
+    margin-bottom: 10px;
 `
 
 export const Title = styled.h1`

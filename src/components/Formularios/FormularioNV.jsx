@@ -8,6 +8,7 @@ import { Api } from "../../api/ClienteService.js";
 import {v4 as uuidv4} from "uuid"
 import styled from "styled-components";
 import ContentTable from "../Table/Table";
+import Loader from "../Loader/Loader";
 
 const DivAcciones =styled.div`
     @media screen and (max-width: 768px){
@@ -32,11 +33,18 @@ const FormNuevoVideo =(props)=>{
     
     const [videos,setVideos]= useState([])
 
+    const [loading,setLoading]= useState(false)
+
     // carga la cosulta de todas la cetegorias para luego ser mostrado en la tabla
     useEffect(()=>{
         const ConsultaApi=async()=>{
-            const{data}= await Api.get("videos");
-            setVideos(data)
+            const res= await Api.get("videos");
+            if(res.status==200){
+                setVideos(res.data);
+                setTimeout(()=>{
+                    setLoading(true)
+                },2500)
+            }
         }
         ConsultaApi();
     },[])
@@ -53,9 +61,15 @@ const FormNuevoVideo =(props)=>{
             descripcion,
             codigoS
         }
-        await Api.post("videos",datos);
-        const{data}= await Api.get("videos");
-        setVideos(data)
+        const post = await Api.post("videos",datos);
+        if(post.status==201){
+            setLoading(false)
+            const res= await Api.get("videos");
+            setVideos(res.data)
+            setTimeout(()=>{
+                setLoading(true)
+            },2500)
+        }
     }
 
     const EliminarVideo = async(id)=>{
@@ -121,7 +135,7 @@ const FormNuevoVideo =(props)=>{
                     <Link to="/NuevaCategoria" ><Btn>Nueva Categoria</Btn></Link>
                 </ContentBtns>
             </Form>
-            <ContentTable Datos={videos} EliminaDato={EliminarVideo} />
+           {loading?  <ContentTable Datos={videos} EliminaDato={EliminarVideo} /> :<Loader />}
         </Section>
     )
 }

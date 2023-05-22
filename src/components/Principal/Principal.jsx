@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Api } from "../../api/ClienteService.js"
 import ReactPlayer from "react-player/youtube";
 
+
 const Section = styled.section`
     min-height: 850px;
     padding: 0 55px;
@@ -28,6 +29,7 @@ const Icon = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    z-index: 10;
     i{
         position: relative;
         font-size: 35px;
@@ -126,9 +128,14 @@ const Principal =(props)=>{
     }
 
     const ActualizarVideoInicio=async(id)=>{
-        const res = await Api.get(`videos/${id}`)
-        if(res.status === 200){
-            return setUrlVideo(res.data.urlVideo)
+        try {
+            const res = await Api.get(`videos/${id}`);
+            if(res.status === 200){
+                return setUrlVideo(res.data.urlVideo)
+        }
+        } catch (error) {
+            console.log(error)
+            
         }
     }
 
