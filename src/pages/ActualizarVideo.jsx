@@ -24,7 +24,7 @@ const ActualizarVideo=()=>{
             const {data} = await Api.get('categorias')
             if(datos.status === 200){
                     setCategorias(data)
-                    // setTitulo(datos.data.titulo);
+                    setTitulo(datos.data.titulo);
                     setUrlVideo(datos.data.urlVideo);
                     setUrlImg(datos.data.urlImg);
                     setCategoria(datos.data.categoria);
