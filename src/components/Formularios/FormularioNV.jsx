@@ -135,7 +135,7 @@ const FormNuevoVideo =(props)=>{
                     <Link to="/NuevaCategoria" ><Btn>Nueva Categoria</Btn></Link>
                 </ContentBtns>
             </Form>
-           {loading?  <ContentTable Datos={videos} EliminaDato={EliminarVideo} /> :<Loader />}
+            {loading?  <ContentTable Datos={videos} EliminaDato={EliminarVideo} /> :<Loader />}
         </Section>
     )
 }

@@ -48,12 +48,8 @@ const FormNuevaCategoria =()=>{
         }
         const post = await Api.post('categorias',data);
         if(post.status==201){
-            setLoading(false)
             const res= await Api.get("categorias");
             setCategorias(res.data) 
-            setTimeout(()=>{
-                setLoading(true)
-            },2500)
         }
     }
 
