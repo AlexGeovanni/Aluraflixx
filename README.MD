@@ -10,7 +10,7 @@ En este proyecto utilize las siguientes herramientas
 * Json-Server
 * Modulos JS
 
-Utilize Azure Devops para alojar db.json y simular los datos en tiempo real
+Utilize railway para alojar db.json y simular los datos en tiempo real
 
 ## Uso
 
