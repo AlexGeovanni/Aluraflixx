@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const Api=axios.create({
-    baseURL: "https://api-alurafliix-production.up.railway.app/",
+    baseURL: "https://aluraflix.azurewebsites.net/",
     timeout: 1000,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
