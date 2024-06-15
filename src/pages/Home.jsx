@@ -18,7 +18,7 @@ const Home = ()=>{
                     setCategoria(categoria.data)
                     setTimeout(()=>{
                         setLoading(true)
-                    },2500)
+                    },1000)
                 }
             }
             Get()
